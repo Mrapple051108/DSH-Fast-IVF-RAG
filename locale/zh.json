@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fast IVF RAG",
+    "description": "聚类向量记忆库：BM25+RRF 混合检索、自动召回注入、自动总结，可查看库详情与聚类可视化。"
+  }
+}

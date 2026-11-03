@@ -1,0 +1,29 @@
+# fast-ivf-rag bundle patch
+#
+# 本文件由插件包自身声明（package.json 的 dsh.bundle.patch）。
+# DSH 启动时按 dsh.profile.bundles 的顺序叠加：dsh-base → 本 bundle patch → profile 的 cordis.patch.yml。
+# 这里只放「插件行必须存在」这一件事，所有可调参数都写成缺省值；
+# 用户在设置页改的值会被 config-editor 写进 profile 的 cordis.patch.yml，形成覆盖层。
+
+- insert:
+    - id: fast-ivf-rag
+      name: 'fast-ivf-rag'
+      config:
+        enabled: true
+        libraryMode: 'reuse'
+        autoRecall: true
+        recallTopK: 5
+        recallMaxChars: 900
+        workerRecall: true
+        autoSummarize: true
+        activeWindow: 24
+        summarizeIdleMinutes: 10
+        summarizeMinMessages: 8
+        useAssociation: false
+        rerankEnabled: true
+        rerankTopN: 10
+        condenseMaxLen: 160
+        rebuildEvery: 50
+        probe: 3
+        maxK: 512
+

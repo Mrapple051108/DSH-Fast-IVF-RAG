@@ -1,0 +1,51 @@
+{
+  "name": "fast-ivf-rag",
+  "version": "0.4.0",
+  "license": "MIT",
+  "author": "Mrapple²",
+  "private": true,
+  "type": "module",
+  "description": "Fast IVF RAG：聚类向量记忆库，BM25+RRF 混合检索、自动召回注入与自动总结，带设置页与可视化面板",
+  "icon": "assets/icon.svg",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/settings.js",
+    "./core": "./lib/library.js",
+    "./icon": "./assets/icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "ui",
+    "client",
+    "locale",
+    "assets",
+    "docs",
+    "test",
+    "plugin.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "optionalDependencies": {},
+  "dsh": {
+    "bundle": {
+      "patch": "./plugin.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ],
+      "immediately": true
+    },
+    "manifestVersion": 1
+  }
+}

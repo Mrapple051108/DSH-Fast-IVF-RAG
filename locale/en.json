@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fast IVF RAG",
+    "description": "Clustered vector memory with BM25+RRF hybrid retrieval, auto-recall injection, and auto-summarization."
+  }
+}
