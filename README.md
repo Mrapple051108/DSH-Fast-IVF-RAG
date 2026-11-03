@@ -306,6 +306,13 @@ threshold = max(minScoreFloor, top1 × minScoreRatio)      // 默认 max(0.35, t
 
 ## 用法
 
+```powershell
+# 从 Release 下 fast-ivf-rag-0.4.0.zip 之后
+dsh plugin --profile desktop add "D:\下载\fast-ivf-rag-0.4.0.zip"
+```
+
+装完面板在 `http://127.0.0.1:<dsh端口>/fast-ivf-rag`，设置 → 插件里也能改全部开关。
+
 ### 模型（可选，不装也能用）
 
 | 模型 | 作用 | 不装会怎样 |
